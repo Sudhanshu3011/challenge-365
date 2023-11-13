@@ -14,3 +14,11 @@ print(word1.endswith("!!"))
 print(word2.find("is"))
 print(word2.index("is"))
 
+str1="hey ist new stringline"
+print(str1.isalpha())
+str2="hello"
+print(str2.islower())
+str3="It is not printable\n"
+print(str3.isprintable())
+print(str3.swapcase())
+print(str3.title())
