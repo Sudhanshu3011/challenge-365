@@ -8,11 +8,12 @@ int main()
     cin >> n;
 
     // highest common factor of the number
-    for (int i = 1; i < n; i++)
+    for (int i = n/2; i >0; i--)
     {
         if (n % i == 0)
         {
             hcf = i;
+            break;
         }
     }
 
