@@ -23,15 +23,15 @@ int main()
 
     for (int i = 0; i <= n; i++)
     {
-        for(int k=n-i;k>0;k--)
+        for (int k = n - i; k > 0; k--)
         {
-            cout<<" ";
+            cout << " ";
         }
         for (int j = 0; j <= i; j++)
         {
-             cout<<comb(i,j)<<" ";
+            cout << comb(i, j) << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
 
     return 0;

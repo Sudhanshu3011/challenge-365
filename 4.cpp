@@ -10,4 +10,5 @@ int main()
     cout<<"The simple intrest of the given amount:"<<endl;
     cout<<si;
 
+
 }
