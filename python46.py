@@ -5,4 +5,5 @@ from python45 import Bus
 B1=Bus("GJ23VD2375","Sleeper_AC","Rajkot-Kutch")
 print(str(B1))
 print(repr(B1))
+print(len(B1))
 B1()
