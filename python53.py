@@ -26,3 +26,5 @@ t=time.localtime()
 Current=time.strftime("%Y-%m-%d %H:%M:%S",t)
 print(Current)
     
+time.sleep(3)
+print("The sleep of 3second is applied")
