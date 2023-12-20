@@ -39,20 +39,20 @@ INSERT INTO Enrollments VALUES (4, 2, 103, 92);
 INSERT INTO Enrollments VALUES (5, 3, 102, 78);
 
 
-Retrieve the names of students who have enrolled in more than two courses.
-Find the course with the highest average grade.
-List the students who have not enrolled in any course.
-Find the total number of courses with at least one student enrolled.
-Retrieve the names of students who have the same age as 'Alice'.
-Find the course with the lowest average grade among courses with more than three students enrolled.
-List the students who have the highest grade in the 'English' course.
-Find the courses with the same number of credits as the 'Mathematics' course.
-Retrieve the names of students who have enrolled in all available courses.
-Find the average age of students who have enrolled in the 'Computer Science' course.
+-- Retrieve the names of students who have enrolled in more than two courses.
+-- Find the course with the highest average grade.
+-- List the students who have not enrolled in any course.
+-- Find the total number of courses with at least one student enrolled.
+-- Retrieve the names of students who have the same age as 'Alice'.
+-- Find the course with the lowest average grade among courses with more than three students enrolled.
+-- List the students who have the highest grade in the 'English' course.
+-- Find the courses with the same number of credits as the 'Mathematics' course.
+-- Retrieve the names of students who have enrolled in all available courses.
+-- Find the average age of students who have enrolled in the 'Computer Science' course.
 
 
 
-1>
+-- 1>
 SELECT student_name
 FROM Students
 WHERE student_id IN (
@@ -62,7 +62,7 @@ WHERE student_id IN (
     HAVING COUNT(DISTINCT course_id) > 2
 );
 
-2>
+-- 2>
 SELECT course_name
 FROM courses
 WHERE course_id IN (
@@ -71,7 +71,7 @@ WHERE course_id IN (
     where grade=( SELECT MAX(grade) FROM Enrollments)
 );
 
-way of approach 2
+-- way of approach 2
 SELECT course_name
 FROM Courses
 WHERE course_id IN (
@@ -82,7 +82,7 @@ WHERE course_id IN (
     LIMIT 1
 );
 
-3>
+-- 3>
 SELECT student_name
 FROM Students
 WHERE student_id NOT IN (
@@ -90,21 +90,21 @@ WHERE student_id NOT IN (
     FROM Enrollments
 );
 
-4>
+-- 4>
 SELECT COUNT(DISTINCT course_id) AS total_courses
 FROM Enrollments;
 
-5>
+-- 5>
 select student_name 
 from students 
 where age=(select age from students where student_name='Alice');
 
-check using this statement that the table is now giving two names
---update students
+-- check using this statement that the table is now giving two names
+ --update students
 --set age=20
 --where student_name='Bob';
 
-6>
+-- 6>
 SELECT course_name
 FROM Courses
 WHERE course_id IN (
@@ -116,7 +116,7 @@ WHERE course_id IN (
     LIMIT 1
 );
 
-7>
+-- 7>
 select s.student_name
 from students s
 join enrollments e
@@ -127,7 +127,7 @@ group by c.course_name='English'
 order by e.grade
 Limit 1;
 
-approach 2
+-- approach 2
 
 SELECT s.student_name
 FROM Students s
@@ -136,12 +136,12 @@ JOIN Courses c ON e.course_id = c.course_id
 WHERE c.course_name = 'English'
       AND e.grade = (SELECT MAX(grade) FROM Enrollments WHERE course_id = c.course_id);
 
-8>
+-- 8>
 select c.course_name 
 from courses c
 where c.credits=(select credits from courses where course_name= 'Mathematics');
 
-9>
+-- 9>
 SELECT s.student_name
 FROM Students s
 WHERE NOT EXISTS (
@@ -155,7 +155,7 @@ WHERE NOT EXISTS (
 );
 
 
-10>
+-- 10>
 select avg(age) as AGE
 from students s
 join enrollments e
