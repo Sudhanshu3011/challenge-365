@@ -6,7 +6,7 @@ void main()
 
     int x[20], size, i;
 
-    printf("Enter siz of an array:");
+    printf("Enter size of an array:");
     scanf("%d", &size);
 
     printf("Enter %d elements:", size);
@@ -54,7 +54,7 @@ int partition(int x[10], int p, int r)
         }
     }
     temp = x[i + 1];
-    x[i] = x[r];
+    x[i+1] = x[r];
     x[r] = temp;
 
     return (i + 1);
