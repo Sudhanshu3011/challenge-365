@@ -32,6 +32,8 @@ int solve(int arr_count, int *arr)
     for (int i = 0; i < arr_count; i++)
     {
         int p = 0, q = 0;
+
+        //the value of the index which is less than i and such that value at the index is greater
         for (int j = 0; j < i; j++)
         {
             if (arr[j] > arr[i])
@@ -40,7 +42,8 @@ int solve(int arr_count, int *arr)
                 //  break;
             }
         }
-
+        
+         //the value of the index which is greater than i and such that value at the index is greater
         for (int k = i + 1; k < arr_count; k++)
         {
             if (arr[k] > arr[i])
