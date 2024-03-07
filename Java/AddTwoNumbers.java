@@ -14,7 +14,7 @@ public class AddTwoNumbers {
 
         System.out.println("Sum: " + sum);
 
-        // Close the scanner to avoid resource leak
+        
         scanner.close();
     }
 }
