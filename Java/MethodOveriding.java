@@ -1,6 +1,6 @@
 class Dimension {
 
-    double dem1;
+    double  dem1;
     double dem2;
 
     Dimension(double dem1, double dem2) {
