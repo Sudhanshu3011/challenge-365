@@ -19,13 +19,13 @@ public class Array_manipulation {
         }
 
         System.out.println("Array before deleting the similar element");
-        printArray(Array);
+        printArray(Array, length);
 
-        for (int i = 0; i < Array.length; i++) {
-            for (int j = i + 1; j < Array.length; j++) {
+        for (int i = 0; i < length; i++) {
+            for (int j = i + 1; j < length; j++) {
                 if (Array[i] == Array[j]) {
 
-                    for (int k = j; k < Array.length - 1; k++) {
+                    for (int k = j; k < length - 1; k++) {
 
                         Array[k] = Array[k + 1];
 
@@ -39,17 +39,17 @@ public class Array_manipulation {
         }
 
         System.out.println("Array after deleting the similar element");
-        printArray(Array);
+        printArray(Array, length);
 
         sc.close();
 
     }
 
-    public static void printArray(int[] arr) {
+    public static void printArray(int[] arr, int length) {
         System.out.println("Array elements:");
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < length; i++) {
             System.out.print(arr[i] + " ");
         }
-        System.out.println(); // Add a newline after printing all elements
+        System.out.println(); 
     }
 }

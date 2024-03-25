@@ -43,7 +43,7 @@ class Result implements Exam,Classify{
         }
         else if(average>=50)
         {
-            return "Second Division";
+            return "Second Division";      
         }
         else{
             return "No Division";

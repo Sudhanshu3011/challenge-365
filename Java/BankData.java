@@ -15,9 +15,7 @@ class Account {
         System.out.println("Name : " + name + " Account_id : " + account_id + " Balance : " + balance);
     }
 
-    // public boolean find(int account_id) {
-    //     return this.account_id == account_id;
-    // }
+    
     public boolean find(int account_id) {
         return this.account_id == account_id;
     }

@@ -2,8 +2,16 @@
 class College {
     int Enroll_no;
     String name;
+    //static statement
     static String collegeName = "VGEC";
 
+    //static as a block 
+    static{
+        collegeName = "VGEC";
+        //it is always called once irrespective of the number of times the object is created   
+
+    }
+    
     public void show() {
         System.out.println("Enrollment no: " + Enroll_no + "  Name: " + name + " College Name: " + collegeName);
     }
