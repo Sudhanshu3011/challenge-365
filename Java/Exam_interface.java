@@ -14,9 +14,7 @@ interface Exam {
        boolean Pass(int marks);
 }
 
-/**
- * Classify
- */
+
  interface Classify {
 
     String Division(int average);

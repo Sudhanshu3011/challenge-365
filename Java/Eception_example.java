@@ -4,7 +4,7 @@
 // NumberFormatException, if an element is incorrectly formatted. Include throws statement
 // in method declaration
 
-public class Eception_example  {
+public class Exception_example  {
 
     public static double average(String[] array) throws NullPointerException, NumberFormatException {
         if (array == null) {

@@ -67,12 +67,14 @@ public class Sbi {
     public static void main(String[] args) {
         
         SavingAccount savingAccount = new SavingAccount(123456789, "Sudhanshu Shekhar", 10000000);
+        savingAccount.checkBalance();
         savingAccount.deposit(500);
         savingAccount.checkBalance();
         savingAccount.callInterest();
 
     
         FixedDepositAccount fixedDepositAccount= new FixedDepositAccount(123456788," Virat Kohli ", 100000000);
+        fixedDepositAccount.checkBalance();
         fixedDepositAccount.deposit(500);
         fixedDepositAccount.checkBalance();
         fixedDepositAccount.callInterest();
